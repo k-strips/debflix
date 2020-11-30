@@ -1,0 +1,11 @@
+/**general styles*/
+
+/**Mobile view*/
+
+/**Tablet view*/
+@media all and (min-width: 700px) {
+}
+
+/**Desktop view*/
+@media all and (min-width: 960px) {
+}

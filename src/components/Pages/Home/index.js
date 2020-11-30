@@ -1,18 +1,21 @@
 import React, { useState } from "react";
+import "./style.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 //constants
-import { POPULAR_BASE_URL, SEARCH_BASE_URL } from "../../config";
+import { POPULAR_BASE_URL, SEARCH_BASE_URL } from "../../../config";
+import { randomInt } from "../../../util/helpers";
 
 //import components
-import { useHome } from "../Hooks";
-import LoadButton from "../Buttons";
-import SearchBar from "../Searchbar";
-import MovieList from "../MovieList";
+import { useHome } from "../../../Hooks/useHome";
+import LoadButton from "../../Buttons";
+import Header from "../../Header";
+import MovieList from "../../MovieList";
 
 const Home = () => {
   const [searchParam, setSearchParam] = useState("");
   const [searchKey, setSearchKey] = useState("");
-  const [{ moviesData, endpoint, isLoading, isError }, setEndpoint] = useHome();
+  const [{ moviesData, isLoading, isError }, setEndpoint] = useHome();
 
   const handleChange = (event) => {
     setSearchParam(event.target.value);
@@ -35,26 +38,26 @@ const Home = () => {
   };
 
   return (
-    <div>
-      <SearchBar
+    <>
+      <Header
+        {...moviesData.movies[randomInt()]}
         onChange={handleChange}
         onSubmit={handleSubmit}
         value={searchParam}
       />
       {isError && <div>Sorry...Something terrible happened:(</div>}
       {isLoading ? (
-        <div>...Loading</div>
+        <div>
+          <FontAwesomeIcon icon={["fas", "spinner"]} size="4x" spin />
+        </div>
       ) : (
-        <MovieList moviesData={moviesData} />
+        <MovieList
+          moviesData={moviesData}
+          onClick={loadMore}
+          searchKey={searchKey}
+        />
       )}
-      {isLoading ? (
-        <div>...fetching more movies</div>
-      ) : (
-        <LoadButton onClick={() => loadMore(searchKey, moviesData.page)}>
-          Load more
-        </LoadButton>
-      )}
-    </div>
+    </>
   );
 };
 

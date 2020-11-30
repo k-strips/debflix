@@ -1,10 +1,20 @@
 import {
-  SEARCH_BASE_URL,
-  POSTER_SIZE,
-  POPULAR_BASE_URL,
   API_KEY,
+  SEARCH_BASE_URL,
+  POPULAR_BASE_URL,
+  IMAGE_BASE_URL,
+  BACKDROP_SIZE,
+  POSTER_SIZE,
 } from "./constant";
 
 import axios from "./axios";
 
-export { SEARCH_BASE_URL, POSTER_SIZE, POPULAR_BASE_URL, API_KEY, axios };
+export {
+  API_KEY,
+  SEARCH_BASE_URL,
+  POPULAR_BASE_URL,
+  IMAGE_BASE_URL,
+  BACKDROP_SIZE,
+  POSTER_SIZE,
+  axios,
+};

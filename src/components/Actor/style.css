@@ -1,0 +1,47 @@
+/**general styles*/
+.actor-card {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  background: #272626;
+}
+
+.card-info h3,
+p {
+  color: #ffffff;
+}
+
+/**Mobile view*/
+.actor-card {
+  width: inherit;
+  height: 100vh;
+  margin-bottom: 0.5rem;
+  border-radius: 20px 20px 0 0;
+}
+
+.actor-card img {
+  height: auto;
+  width: 100%;
+  border-radius: 20px;
+}
+
+/**Tablet view*/
+@media all and (min-width: 700px) {
+}
+
+/**Desktop view*/
+@media all and (min-width: 960px) {
+  .actor-card {
+    width: 15%;
+    height: 30%;
+    margin: 0.5rem;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .actor-card img {
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+  }
+}

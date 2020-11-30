@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
 //local import
-import { axios, POPULAR_BASE_URL } from ".";
+import { axios, POPULAR_BASE_URL } from "../config";
 
-const useHome = () => {
+export const useHome = () => {
   const [moviesData, setMoviesData] = useState({
     movies: [],
     page: 0,
@@ -41,5 +41,3 @@ const useHome = () => {
 
   return [{ moviesData, endpoint, isLoading, isError }, setEndpoint];
 };
-
-export default useHome;

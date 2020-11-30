@@ -1,14 +1,24 @@
 import React from "react";
+import "./style.css";
 
 //local import
 import MovieThumbnail from "../MovieThumbnail";
+import LoadButton from "../Buttons";
 
-const MovieList = ({ moviesData }) => {
+const MovieList = ({ moviesData, onClick }) => {
   return (
     <div className="movies-listing">
       {moviesData.movies.map((movie) => {
-        return <MovieThumbnail key={movie.id} {...movie} />;
+        return (
+          <MovieThumbnail
+            key={movie.id}
+            {...movie}
+            clickable
+            className="home-thumbnail"
+          />
+        );
       })}
+      <LoadButton onClick={onClick}>LoadMore</LoadButton>
     </div>
   );
 };

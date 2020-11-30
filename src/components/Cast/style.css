@@ -1,0 +1,37 @@
+/**general styles*/
+
+.cast-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.cast-container h2 {
+  color: #252525;
+  font-size: 2rem;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+
+.actors-container {
+  display: flex;
+  width: inherit;
+}
+
+/**Mobile view*/
+.actors-container {
+  flex-flow: column nowrap;
+}
+
+/**Tablet view*/
+@media all and (min-width: 700px) {
+}
+
+/**Desktop view*/
+@media all and (min-width: 960px) {
+  .actors-container {
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,18 @@
+/**general styling*/
+
+.movies-listing {
+  display: flex;
+  flex-flow: row wrap;
+  align-self: start;
+  justify-content: center;
+}
+
+/**Mobile view*/
+
+/**Tablet view*/
+@media all and (min-width: 700px) {
+}
+
+/**Desktop view*/
+@media all and (min-width: 960px) {
+}

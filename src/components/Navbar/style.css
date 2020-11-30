@@ -1,0 +1,30 @@
+/**general styles*/
+
+.movie-nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #161616;
+}
+
+.movie-nav ul {
+  display: flex;
+  flex-flow: row;
+  list-style: none;
+}
+
+.movie-nav li {
+  padding-right: 1rem;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.movie-nav a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.fa-icons {
+  color: #ffffff;
+}

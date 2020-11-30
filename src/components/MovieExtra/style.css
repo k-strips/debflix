@@ -1,0 +1,34 @@
+/**general styles*/
+
+.movie-extra {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #161616;
+}
+
+.movie-extra > p {
+  color: #ffffff;
+  font: italic 1.2rem bold;
+  text-transform: capitalize;
+}
+
+.fa-icons {
+  color: #ffffff;
+}
+
+/**Mobile view*/
+.movie-extra {
+}
+
+.movie-extra > p {
+}
+
+/**Tablet view*/
+@media all and (min-width: 700px) {
+}
+
+/**Desktop view*/
+@media all and (min-width: 960px) {
+}

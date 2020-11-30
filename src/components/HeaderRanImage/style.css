@@ -1,0 +1,56 @@
+/**general styles*/
+
+.hero-image {
+  display: flex;
+  flex-flow: column nowrap;
+  background: no-repeat center;
+  background-size: cover !important;
+  align-items: center;
+  position: relative;
+}
+
+.hero-image h3 {
+  font: 1.5rem;
+}
+
+.hero-image p {
+  font: 1rem;
+}
+
+.hero-image h3,
+p {
+  font-weight: bold;
+}
+
+/**Mobile view*/
+.hero-image {
+  width: inherit;
+  height: 90vh;
+}
+
+.hero-image-txt {
+  width: 70%;
+  position: absolute;
+  top: 60vh;
+}
+
+/**Tablet view*/
+@media all and (min-width: 700px) {
+}
+
+/**Desktop view*/
+@media all and (min-width: 960px) {
+  .hero-image {
+    width: inherit;
+    height: 90vh;
+    padding: 1rem;
+  }
+
+  .hero-image-txt {
+    width: 50%;
+    justify-self: flex-end;
+    position: absolute;
+    top: 60vh;
+    left: 2rem;
+  }
+}
