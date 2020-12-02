@@ -8,7 +8,6 @@ import { randomInt } from "../../../util/helpers";
 
 //import components
 import { useHome } from "../../../Hooks/useHome";
-import LoadButton from "../../Buttons";
 import Header from "../../Header";
 import MovieList from "../../MovieList";
 
@@ -53,7 +52,7 @@ const Home = () => {
       ) : (
         <MovieList
           moviesData={moviesData}
-          onClick={loadMore}
+          onClick={() => loadMore(searchKey, moviesData.page)}
           searchKey={searchKey}
         />
       )}
